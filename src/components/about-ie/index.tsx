@@ -41,12 +41,15 @@ export function AboutIE({
   return (
     <>
       <Box
-        sx={{
+        sx={(theme) => ({
           display: "flex",
           width: "100vw",
           height: "100vh",
           backgroundColor: "#fff",
-        }}
+          [theme.breakpoints.down("lg")]: {
+            overflowY: "scroll",
+          },
+        })}
       >
         <Box
           sx={(theme) => ({
@@ -55,7 +58,7 @@ export function AboutIE({
             justifyContent: "flex-start",
             [theme.breakpoints.down("lg")]: {
               //   display: "none",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "center",
               marginLeft: "10px",
               marginRight: "10px",
@@ -63,7 +66,7 @@ export function AboutIE({
             marginLeft: "60px",
             marginRight: "60px",
             marginTop: "40px",
-            alignItems: "start",
+            alignItems: "center",
             width: "100vw",
             height: "100vh",
           })}
@@ -129,8 +132,7 @@ export function AboutIE({
                   sx={(theme) => ({
                     minWidth: "400px",
                     [theme.breakpoints.down("lg")]: {
-                      minWidth: "350px",
-                      maxWidth: "350px",
+                      minWidth: "300px",
                     },
                   })}
                 />
@@ -171,7 +173,7 @@ export function AboutIE({
                   sx={(theme) => ({
                     minWidth: "400px",
                     [theme.breakpoints.down("lg")]: {
-                      minWidth: "350px",
+                      minWidth: "300px",
                       maxWidth: "350px",
                     },
                   })}
@@ -213,7 +215,7 @@ export function AboutIE({
                   sx={(theme) => ({
                     minWidth: "400px",
                     [theme.breakpoints.down("lg")]: {
-                      minWidth: "350px",
+                      minWidth: "300px",
                       maxWidth: "350px",
                     },
                   })}
@@ -256,7 +258,7 @@ export function AboutIE({
                   sx={(theme) => ({
                     minWidth: "400px",
                     [theme.breakpoints.down("lg")]: {
-                      minWidth: "350px",
+                      minWidth: "300px",
                     },
                   })}
                 />
@@ -280,6 +282,7 @@ export function AboutIE({
               [theme.breakpoints.down("lg")]: {
                 minWidth: "200px",
                 fontSize: "15px",
+                marginBottom: "100px",
               },
               backgroundColor: "#FF8424",
             })}
